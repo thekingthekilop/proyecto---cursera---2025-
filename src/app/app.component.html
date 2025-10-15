@@ -1,0 +1,35 @@
+﻿<div class="container">
+  <h1>Sistema de Tracking de Clicks</h1>
+  
+  <div class="tracking-section">
+    <h2>Contadores de Tracking</h2>
+    
+    <div class="counters-grid">
+      <app-animated-counter 
+        *ngFor="let tag of (tracking | async)?.tags | keyvalue"
+        [count]="tag.value"
+        [label]="tag.key">
+      </app-animated-counter>
+      
+      <app-animated-counter 
+        [count]="(tracking | async)?.totalClicks || 0"
+        label="Total Clicks">
+      </app-animated-counter>
+    </div>
+    
+    <button (click)="resetCounters()" appClickTracker="reset-button">
+      Reiniciar Contadores
+    </button>
+  </div>
+
+  <div class="interactive-section">
+    <h2>Mapa Interactivo</h2>
+    <app-map></app-map>
+    
+    <div class="test-buttons">
+      <button appClickTracker="test-button-1">Botón Test 1</button>
+      <button appClickTracker="test-button-2">Botón Test 2</button>
+      <button appClickTracker="test-button-3">Botón Test 3</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<div class="map-container">
+  <div style="height: 400px; width: 100%; background: #e0e0e0; display: flex; align-items: center; justify-content: center; border: 2px dashed #ccc; border-radius: 8px;">
+    <div style="text-align: center;">
+      <h3>🌍 Mapa Interactivo</h3>
+      <p>Componente de mapa listo para integrar Mapbox</p>
+      <button 
+        (click)="onMarkerClick()" 
+        appClickTracker="map-marker" 
+        style="padding: 10px 20px; background: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin: 10px;">
+        🎯 Click en el Marcador
+      </button>
+      <p style="color: #666; font-size: 14px; margin-top: 10px;">Este botón simula el marcador del mapa</p>
+    </div>
+  </div>
+</div>

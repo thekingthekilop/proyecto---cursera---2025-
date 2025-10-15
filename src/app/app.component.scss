@@ -1,0 +1,50 @@
+﻿.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tracking-section {
+  margin-bottom: 2rem;
+  
+  .counters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      background: #0056b3;
+    }
+  }
+}
+
+.interactive-section {
+  .test-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    
+    button {
+      padding: 0.5rem 1rem;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &:hover {
+        background: #1e7e34;
+      }
+    }
+  }
+}
